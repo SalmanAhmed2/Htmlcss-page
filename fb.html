@@ -13,7 +13,7 @@
     .main{
         background-color: #2851A3;
         width: 100%;
-        height: 89px;    
+        height: 92px;
     }
     .fb{
         width: 180px;
@@ -37,6 +37,7 @@
         color: white;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 17px;
+        font-weight: 500;
     }
     .forgot{
         color:grey;
@@ -50,7 +51,7 @@
         height: 500px;
         margin: 0px 0px 0px 100px;
         font-family: Arial, Helvetica, sans-serif;
-        background-image: url('side.png');
+        background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yi/r/OBaVg52wtTZ.png');
         background-repeat: no-repeat;
         background-position-y: 150px;
         font-weight: bold;
@@ -66,6 +67,10 @@
         font-family: Arial, Helvetica, sans-serif;
         font-size: 18px;
     }
+    h1{
+        margin-top:30px;
+        margin-bottom: 10px;
+    }
     .form{
         width: 550px;
         height: 450px;
@@ -74,6 +79,13 @@
         left: 800px;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 17px;
+    }
+    #gender{
+        margin-top: 10px;
+        margin-bottom: 16px;
+    }
+    h3{
+        margin-top: -8px;
     }
     .term{
         text-decoration: none;
@@ -90,14 +102,34 @@
     .login{
         color: white;
         background-color:#2851A3;
+        /* border: 1px solid grey; */
+        border-radius: 5px;
     }
     .signup{
+        margin-top: -8px;
         color: white;
         background-color:#578843;
+        border-radius: 10px;
         font-size: 20px;
+        font-weight: 700;
         width: 200px;
         height: 50px;
     }
+    #bclick{
+        margin-top: -5px;
+        font-size: 15px;
+    }
+    #sgnup{
+        height: 30px;
+        text-align: left;
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border-color: darkgray;
+    }
+
         </style>
 </head>
 <body>
@@ -106,7 +138,7 @@
     <div class="email">
         <form action="Email">
             <table>
-                <tr>
+                <tr id="log">
                     <td><label for="Email or Number"> Email or Phone</td>
                     <td><label for="Password">Password</td>
                 </tr>
@@ -131,27 +163,27 @@
         <form><table>
             <tr>
             <td><label for="First Name">
-                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="First Name" id="sgnup">
             </label></td>
         <td><label for="Surname">
-                <input type="text" name="Surname" placeholder="Surname">
+                <input type="text" name="Surname" placeholder="Surname" id="sgnup">
             </label></td></tr>
             <tr>
             <td colspan="2">
                 <label for="Email">
-                    <input type="Email" name="Email" placeholder="Mobile Number or Email address" size="45">
+                    <input type="Email" name="Email" placeholder="Mobile Number or Email address" size="45" id="sgnup">
                 </label>
             </td></tr>
             <tr>
                 <td colspan="2">
                     <label for="Password">
-                        <input type="password" placeholder="New Password" size="45">
+                        <input type="password" placeholder="New Password" size="45" id="sgnup">
                     </label>
                 </td>
             </tr>
             <tr>
                 <td>
-                        <h3>Birthday</h3>
+                <h3>Birthday</h3>
         <select name="Days" Days>
         <option value="Days">08</option>
         <option value="Days"> 02</option>
@@ -180,16 +212,17 @@
     </tr>
     <tr>
         <td>
-        <label for="Gender"> Gender</label>
-        <br>
-        <input type="radio" value="Male" name="Gender">
-        <label for="Male"> Male</label>
-        <input type="radio" value="Female" name="Gender">
-        <label for="Female"> Female</label>
-    
+            <div id="gender">
+                <label for="Gender" > <b> Gender</b></label>
+                <br>
+                <input type="radio" value="Male" name="Gender">
+                <label for="Male"> Male</label>
+                <input type="radio" value="Female" name="Gender">
+                <label for="Female"> Female</label>
+            </div>  
         </td>
     </tr></table></form>
-    <p>By clicking Sign Up, you agree to our
+    <p id="bclick">By clicking Sign Up, you agree to our
             <a href="#" class="term"> Terms</a>,
             <a href="#" class="data"> Data Policy</a> and <br>
             <a href="#" class="policy"> Cookie Policy </a>You may receive SMS notifications from us and <br> can opt out at any time.
@@ -197,7 +230,7 @@
         </p>
     
     <input type="submit" value="Sign Up" class="signup">
-    <p><a href="#" class="create"> Create a Page</a> for a celebrity, band or business.</p>    
+    <p id="create"><a href="#" class="create"> Create a Page</a> for a celebrity, band or business.</p>    
         </div>
 </div>
 
